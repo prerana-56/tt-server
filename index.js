@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://tic-tac-toe-h2tc.onrender.com",
     methods: ["GET", "POST"],
   },
 });
@@ -109,4 +109,5 @@ socket.on("makeMove", (data) => {
 
 server.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
+
 });
